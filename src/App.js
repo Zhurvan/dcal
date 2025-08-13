@@ -84,7 +84,7 @@ function App() {
 
   // --- Load events ---
   useEffect(() => {
-    fetch('/data.json')
+    fetch(`${process.env.PUBLIC_URL}/data.json`)
       .then(res => res.json())
       .then(data => {
         const mapped = data.map((e) => {
